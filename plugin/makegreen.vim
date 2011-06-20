@@ -20,7 +20,7 @@ set cpo&vim
 hi GreenBar term=reverse ctermfg=white ctermbg=green guifg=white guibg=green
 hi RedBar   term=reverse ctermfg=white ctermbg=red guifg=white guibg=red
 
-function MakeGreen(...) "{{{1
+function! MakeGreen(...) "{{{1
   let arg_count = a:0
   if arg_count
     let make_args = a:1
@@ -43,7 +43,7 @@ endfunction
 "}}}1
 "
 " Utility Functions" {{{1
-function s:GetFirstError()
+function! s:GetFirstError()
   if getqflist() == []
     return ''
   endif
@@ -62,7 +62,7 @@ function s:GetFirstError()
   return error_message
 endfunction
 
-function s:Bar(type, msg)
+function! s:Bar(type, msg)
   if a:type == "red"
     echohl RedBar
   else
