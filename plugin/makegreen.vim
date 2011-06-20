@@ -68,7 +68,7 @@ function! s:Bar(type, msg)
   else
     echohl GreenBar
   endif
-  echon a:msg repeat(" ", &columns - strlen(a:msg) - 1)
+  echon a:msg repeat(" ", &columns - strlen(a:msg) - 0)
   echohl None
 endfunction
 
